@@ -1,0 +1,48 @@
+name: Microsoft Teams Notification
+on:
+  push:
+    branches:
+      - master   # Adjust the branch name as needed
+
+jobs:
+  send_notification:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Send notification to Microsoft Teams
+        env:
+          TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
+        run: |
+          # Construct the message card payload using the GitHub context and other information you want to include
+          payload='{
+            "@type": "MessageCard",
+            "@context": "http://schema.org/extensions",
+            "summary": "New Git Push",
+            "themeColor": "0076D7",
+            "title": "New Git Push to Repository",
+            "text": "A new commit was pushed to the repository.",
+            "sections": [
+              {
+                "activityTitle": "Repository: ${{ github.repository }}",
+                "activitySubtitle": "Branch: ${{ github.ref }}",
+                "activityImage": "https://example.com/repo-image.png",
+                "facts": [
+                  {
+                    "name": "Commit Message",
+                    "value": "${{ github.event.head_commit.message }}"
+                  },
+                  {
+                    "name": "Pushed By",
+                    "value": "${{ github.actor }}"
+                  }
+                ],
+                "markdown": true
+              }
+            ]
+          }'
+
+          # Send the payload to Microsoft Teams using curl
+          curl -X POST -H "Content-Type: application/json" -d "$payload" "$TEAMS_WEBHOOK_URL"
