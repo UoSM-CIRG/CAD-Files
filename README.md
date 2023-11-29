@@ -5,10 +5,10 @@ Welcome to the University of Southampton Malaysia - Connected Intelligence Resea
 
 The following open-source tools are used for CAD file modeling, assembly, and design in the repository.:
 
-| Tool             | Download Link                                             | Misc                        |
-|------------------|-----------------------------------------------------------|-----------------------------|
-| FreeCAD          | [Download FreeCAD](https://www.freecad.org/downloads.php) | A2Plus addon                |
-| Blender          | [Download Blender](https://www.blender.org/download/)     |                             |
+| Tool             | Download Link                                             | Misc                                           |
+|------------------|-----------------------------------------------------------|------------------------------------------------|
+| FreeCAD          | [Download FreeCAD](https://www.freecad.org/downloads.php) | [A2Plus addon](https://github.com/kbwbe/A2plus)|
+| Blender          | [Download Blender](https://www.blender.org/download/)     | [Phobos addon](https://github.com/dfki-ric/phobos)                                               |
 
 
 ## Disclaimer

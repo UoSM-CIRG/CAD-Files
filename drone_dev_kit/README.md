@@ -1,7 +1,7 @@
 # Drone Dev Kit
 
 This repository contains CAD files for various drone development kits. 
-Included in this collection is a FreeCAD project file that allows you to:
+Included in this collection is a FreeCAD and Blender project file that allows you to:
 
 - Visualize the complete assembly of the drone.
 - Explore the drone structure allowing the removal or addition of parts to the assembly.
@@ -19,6 +19,8 @@ The ModalAI VOXL-m500 in this repository is crafted with components from various
 - Propellers: The propellers for the VOXL-m500 have a diameter of 10 inches and a pitch of 45 inches. You can obtain the propeller model from [Grabcad](https://grabcad.com/library/propeller-10x45-1).
 
 
-| Drone                | Image Previews                                                                          | Formats               |
-|----------------------|-----------------------------------------------------------------------------------------|------------------------|
-| **VOXL-m500**        | <img src="./voxl-m500/m500.png" alt="VOXL M500 Preview" width="200"/> <br> <img src="./voxl-m500/m500_CAD.png" alt="VOXL M500 CAD Preview" width="200"/> | .step, .dae, .stl      |
+| Drone                                                              | FreeCAD                                                                       | Blender
+|-----------------------------------------------------------------------|-------------------------------------------------------------------------------|---------
+|<img src="./voxl-m500/m500.png" alt="VOXL M500 Preview" width="200"/> | <img src="./voxl-m500/m500_CAD.png" alt="VOXL M500 CAD Preview" width="200"/> | <img src="./voxl-m500/m500_BLENDER.png" alt="VOXL M500 Blender Preview" width="200"/> |
+
+- File format includes **.step**, **.stl**, **.urdf + .dae** 
