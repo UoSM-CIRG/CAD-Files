@@ -13,7 +13,7 @@ Included in this collection is a FreeCAD and Blender project file that allows yo
 
 - **catkin_ws:** The main workspace.
   - **display_model:** A ROS package for displaying the model on RVIZ.
-    - **launch:** Contains multiple launch files for different scenarios.
+    - **description:** The model description urdf/xacro.
       - m500_urdf/
     - **launch:** Contains multiple launch files for different scenarios.
       - display_m500.launch
