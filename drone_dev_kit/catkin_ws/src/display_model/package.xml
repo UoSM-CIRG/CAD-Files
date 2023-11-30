@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>display_model</name>
+  <version>1.0.0</version>
+  <description>
+    Display URDF model in RVIZ
+  </description>
+  <maintainer email="skl1g14@soton.ac.uk">Janitor</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>    
+ 
+  <exec_depend>robot_state_publisher</exec_depend>
+</package>
