@@ -1,0 +1,22 @@
+# Ignore Blender files
+*.blend
+
+# Ignore FreeCAD files
+*.FCstd
+
+# Ignore STEP files
+*.step
+
+# Ignore STL files
+*.stl
+
+# Ignore Collada files
+*.dae
+
+# Ignore URDF files
+*.urdf
+
+# Ignore USD files
+*.usd
+*.usda
+
