@@ -13,9 +13,6 @@
 # Ignore Collada files
 *.dae
 
-# Ignore URDF files
-*.urdf
-
 # Ignore USD files
 *.usd
 *.usda
