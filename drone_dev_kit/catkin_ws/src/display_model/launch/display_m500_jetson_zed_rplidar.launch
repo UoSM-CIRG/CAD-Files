@@ -7,5 +7,5 @@
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" output="screen" />
 
   <!-- Run RViz -->
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find display_model)/rviz/m500_config.rviz" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find display_model)/rviz/m500_jetson_zed_rplidar_config.rviz" />
 </launch>

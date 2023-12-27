@@ -31,6 +31,8 @@ if __name__ == "__main__":
     # List of directories
     directories = [
         "description/m500_urdf/meshes/dae/",
+        "description/m500_jetson_zed_urdf/meshes/dae/",
+        "description/m500_jetson_rplidar_urdf/meshes/dae/",
         "description/m500_jetson_zed_rplidar_urdf/meshes/dae/",
     ]
 
