@@ -19,4 +19,5 @@ Please review the specific licensing terms and attribution requirements associat
 
 ## Folder Structure
 
-- [Drone Dev Kit](./drone_dev_kit): CAD files for drone development kits.
+- [Drone Dev Kit](./drone_dev_kit): CAD files for Drone/UAV development kits.
+- [Lora Node](./lora_node): CAD files for LORA development kits.

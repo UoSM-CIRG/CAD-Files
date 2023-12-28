@@ -14,8 +14,14 @@ Included in this collection is a FreeCAD and Blender project file that allows yo
 - **catkin_ws:** The main workspace.
   - **display_model:** A ROS package for displaying the model on RVIZ.
     - **description:** The model description urdf/xacro.
+      - m500_jetson_rplidar_urdf/
+      - m500_jetson_zed_rplidar_urdf/
+      - m500_jetson_zed_urdf/
       - m500_urdf/
     - **launch:** Contains multiple launch files for different scenarios.
+      - display_m500_jetson_rplidar.launch
+      - display_m500_jetson_zed_rplidar.launch
+      - display_m500_jetson_zed.launch
       - display_m500.launch
     - **rviz:** RViz configuration files for displaying various models.
       - m500_config.rviz
@@ -31,6 +37,10 @@ source /opt/ros/{ros_distro}/setup.bash
 cd {repo_location}/catkin_ws
 catkin_make
 source devel/setup.bash
+```
+Run the python script to unzip all mesh files.
+```bash
+python {repo_location}/catkin_ws/src/display_model/unzip_meshes.py
 ```
 
 Example launch
@@ -53,3 +63,12 @@ The ModalAI VOXL-m500 in this repository is crafted with components from various
 |<img src="./voxl-m500/m500.png" alt="VOXL M500 Preview" width="200"/> | <img src="./voxl-m500/m500_CAD.png" alt="VOXL M500 CAD Preview" width="200"/> | <img src="./voxl-m500/m500_BLENDER.png" alt="VOXL M500 Blender Preview" width="200"/> | <img src="./voxl-m500/m500_RVIZ.png" alt="VOXL M500 RVIZ Preview" width="200"/>
 
 - File format includes **.step**, **.stl**, **.urdf + .dae** 
+
+Also include customized variant.
+- Jetson Orin Nano Model: Jetson Orin Nano dev board is taken from [Nvidia Download Centre](https://developer.nvidia.com/embedded/downloads).
+- Slamtec RPLidarS1 Model: The LiDAR models is available at [Slamtec Download](https://www.slamtec.ai/downloads/) page.
+- Stereolabs Zed camera: The camera can be found at [Stereolabs's Support Centre](https://support.stereolabs.com/hc/en-us/articles/360007494333-Can-I-get-3D-models-and-dimensions-of-my-camera).
+
+USD files for Omniverse and Isaac-Sim is also available. It is created using the [URDF importer](https://docs.omniverse.nvidia.com/isaacsim/latest/features/environment_setup/ext_omni_isaac_urdf.html). 
+
+<img src="./voxl-m500_jetson-orin_zed-mini_rplidars1/m500_Omniverse.png" alt="VOXL M500 Omniverse Preview" width="500"/>
