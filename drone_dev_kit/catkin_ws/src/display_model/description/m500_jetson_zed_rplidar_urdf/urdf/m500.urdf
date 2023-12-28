@@ -342,23 +342,27 @@
     <sensor name="rplidar_sensor" type="lidar">
       <parent link="rplidar_link"/>
       <ray>
-        <scan>
-          <horizontal>
-            <samples>16</samples>
-            <min_angle>0</min_angle>
-            <max_angle>6.28319</max_angle>
-          </horizontal>
-          <vertical>
-            <samples>24</samples>
-            <min_angle>0</min_angle>
-            <max_angle>6.28319</max_angle>
-            <resolution>0.26180</resolution>
-          </vertical>
-        </scan>
-        <range>
-          <max>5.00000</max>
-        </range>
-      </ray>
+			<scan>
+				<horizontal>
+					<!-- https://wiki.ros.org/urdf/XML/sensor -->				
+					<samples>400</samples> 
+					<resolution>1</resolution> 
+					<min_angle>-3.14159</min_angle>
+					<max_angle>3.14159</max_angle>
+				</horizontal>
+			</scan>
+			<range>
+				<!-- https://www.slamtec.com/en/Lidar/S1Spec -->
+				<min>0.1</min> <!-- blind range 0.1m -->
+				<max>10.0</max> <!-- max range black=10m, white=40m -->
+				<resolution>0.05</resolution> <!-- resolution +/- 5cm -->
+			</range>
+			<noise>
+				<type>gaussian</type>
+				<mean>0.0</mean>
+				<stddev>0.01</stddev>
+			</noise>
+		</ray>
     </sensor>
     <visual name="rplidar">
       <origin rpy="0.00000 0.00000 0.00000" xyz="0.00000 0.00000 0.00000"/>
